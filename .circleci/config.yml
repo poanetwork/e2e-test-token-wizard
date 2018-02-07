@@ -1,0 +1,68 @@
+version: 2
+
+jobs:
+  build:
+    working_directory: ~/ddd
+    docker:
+      - image: circleci/node:latest-browsers
+    steps:
+      - checkout
+
+      - run: strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBC
+      - run: npm install
+      - run: node -v
+      - run: npm -v
+      - run: google-chrome --version
+      - run: chromedriver -v
+      - run:
+          name: Creating Artifacts
+          command: |
+            sudo echo "my artifact file" > ~/ddd/artifact-1;
+            # sudo mkdir ~/ddd/artifacts;
+            # sudo echo "my artifact files in a dir" > ~/ddd/artifacts/artifact-2;
+
+      #- run:
+     #     command: |
+       #     cd /
+#
+        #    sudo mkdir -p /etc/opt/chrome/policies/managed
+        #    cd ~/ddd
+        #    ls -l
+         #   sudo cp test_policy.json /etc/opt/chrome/policies/managed
+        #    cd /etc/opt/chrome/policies/managed
+         #   ls -l
+          #  cat test_policy.json
+     # - run: google-chrome
+     # - run: sudo killall chrome
+
+     # - run: sudo mkdir /1 # sudo cp test_policy.json /etc/opt/chrome/policies/managed
+      #- run: cd /1
+
+
+  test:
+    docker:
+      - image:  circleci/node:latest-browsers
+    working_directory: ~/ddd
+    steps:
+      - checkout
+
+      - run: node index.js
+
+
+      - store_artifacts:
+          path: ~/ddd/artifacts
+          destination: artifact-file
+
+      - store_artifacts:
+          path: ~/ddd/artifacts
+      #- run:
+
+
+workflows:
+       version: 2
+       build_and_test:
+         jobs:
+           - build
+           - test:
+               requires:
+                 - build
