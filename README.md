@@ -5,7 +5,7 @@
 
 ### Installation
 ```
- git clone https://github.com/dennis00010011b/TetsingWizardPOA.git
+ https://github.com/poanetwork/e2e-test-token-wizard#installation
 ```
 ```
   npm install create-poa-crowdsale

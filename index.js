@@ -21,7 +21,7 @@ const TierPage=tierpage.TierPage;
 const Web3 = require('web3');
 const fs = require('fs');
 ///////////////////////////////////////
-//createPOACrowdsale('crowdsale.json','account.json','./results', 'config.json');
+createPOACrowdsale('crowdsale.json','account.json','./results', 'config.json');
 
 function createPOACrowdsale(currencyFile,accountFile,outputDirectory, configFile) {
 
