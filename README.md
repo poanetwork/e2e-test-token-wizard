@@ -20,7 +20,7 @@
 ```
 where:
 * ```crowdsale.json```  is _.json_ file  (see example below) with crowdsale's parameters. Should be located in project working directory.
-* ```account.json```  is _.json_ file in working directory (see example below) with data for Etherium wallet (Rinkeby network only). Should be located in project working directory.
+* ```account.json```  is _.json_ file in working directory (see example below) with data for Ethereum wallet (Rinkeby network only). Should be located in project working directory.
 * ```pathToOutputDirectory``` is relative path from working directory to folder with expected result of scrypt executing. If folder doesn't exist it will be created.
 * ```config.json``` is _.json_ file in working directory (see example below) with configuration parameters.
 See file's examples below or 
