@@ -1,7 +1,7 @@
 {
-    "name": "MySuperCoin",
-    "ticker": "MSC",
-    "decimals": 0,
+    "name": "MySuperCoin24",
+    "ticker": "MSCqj",
+    "decimals": 3,
     "reservedTokens":[
        {
         "address" :"0x6f53002497203d167771eb0852b4c1caDA7a585f",
@@ -14,7 +14,7 @@
          "value": 10
        }],
     "walletAddress":"0xF16AB2EA0a7F7B28C267cbA3Ed211Ea5c6e27411",
-    "gasprice": 100,
+    "gasprice": 40,
     "mincap": 1,
     "whitelisting":false,
     "tiers":[
@@ -22,9 +22,9 @@
        "name":"###1",
         "allowModify": true,
         "startDate": "02/07/2018",
-        "startTime": "4:40pm",
+        "startTime": "11:15pm",
         "endDate":"02/07/2018",
-        "endTime":"8:00pm",
+        "endTime":"11:45pm",
         "rate":100,
         "supply": 200,
         "whitelist":[
@@ -47,7 +47,7 @@
         "endDate":"08/10/2019",
         "endTime":"11:34pm",
         "rate":40,
-        "supply": 2300,
+        "supply": 500,
         "whitelist":[
         {
          "address":"0x6f53002497203d167771eb0852b4c1caDA7a585f",

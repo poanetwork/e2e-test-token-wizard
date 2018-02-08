@@ -94,6 +94,7 @@ class TierPage extends page.Page{
         let locator;
         if (this.number==0) {locator=fieldRateTier1;}
         else {locator=by.By.xpath(fieldRate1+this.number+fieldRate2);}
+        super.clearField(locator);
         super.fillWithWait(locator,this.tier.rate);
     }
     fillSupply()
@@ -101,6 +102,7 @@ class TierPage extends page.Page{
         let locator;
         if (this.number==0) {locator=fieldSupplyTier1;}
         else {locator=by.By.xpath(fieldSupply1+this.number+fieldSupply2);}
+        super.clearField(locator);
         super.fillWithWait(locator,this.tier.supply);
 
     }

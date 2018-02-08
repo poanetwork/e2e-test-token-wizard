@@ -87,7 +87,7 @@ if (installMetaMask) {
         welcomePage.clickButtonNewCrowdsale();
         this.driver.sleep(2000);
         wizardStep1.clickButtonContinue();
-        this.driver.sleep(2000);
+        this.driver.sleep(500);
         wizardStep2.fillName(cur.name);
 
         wizardStep2.fillTicker(cur.ticker);
@@ -97,7 +97,7 @@ if (installMetaMask) {
        {reservedTokens.fillReservedTokens(cur.reservedTokens[i]);
         reservedTokens.clickButtonAddReservedTokens();
        }
-
+       utils.takeScreenshoot(this.driver,this.outputDirectory);
 
         wizardStep2.clickButtonContinue();
 
@@ -105,14 +105,18 @@ if (installMetaMask) {
        wizardStep3.setGasPrice(cur.gasPrice);
        if (cur.whitelisting) wizardStep3.clickCheckboWhitelistYes();
        else (wizardStep3.fillMinCap(cur.minCap));
+       utils.takeScreenshoot(this.driver,this.outputDirectory);
 
         for (var i=0;i<cur.tiers.length-1;i++)
         {
         tiers[i].fillTier();
-        wizardStep3.clickButtonAddTier();
+            utils.takeScreenshoot(this.driver,this.outputDirectory);
+
+            wizardStep3.clickButtonAddTier();
 
         }
         tiers[cur.tiers.length-1].fillTier();
+       utils.takeScreenshoot(this.driver,this.outputDirectory);
 
 
 
@@ -127,7 +131,7 @@ if (installMetaMask) {
 
         var before = utils.getTransactionCount(metaMask.wallet.account);
 
-       for (var i=0;i<83;i++)
+       for (var i=0;i<75;i++)
            doTransaction(before,this.driver,this.outputDirectory);
 
         var s=fs.readFileSync('tempAddr.txt',"utf8");
@@ -162,6 +166,7 @@ if (installMetaMask) {
                     driver.findElement(buttonContinue.buttonContinue).click()
                         .then((res)=>{
                             driver.sleep(10000);
+                            utils.takeScreenshoot(driver,outputDirectory);
                             crowdsalePage.clickButtonInvest();
                             driver.sleep(10000);
                            driver.getCurrentUrl().then((res)=>{
@@ -169,6 +174,7 @@ if (installMetaMask) {
                                fs.writeFileSync(outputDirectory+'/result.log', res);
                                fs.writeFileSync('./artifacts/result.log', res);//for circleci
                                utils.takeScreenshoot(driver,outputDirectory);
+                               i=100;
                            });
 
 
