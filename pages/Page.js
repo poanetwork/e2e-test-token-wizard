@@ -30,7 +30,19 @@ class Page {
      }
 
 
+clearField(element){
+    let field = this.driver.wait(webdriver.until.elementLocated(element), Twait);
+    const c=key.chord(key.CONTROL,"a");
+    const action=this.driver.actions();
+    action.click(field).perform();
+    //action.click(field).perform();
+    this.driver.sleep(500);
+    action.sendKeys(c).perform();
+    action.sendKeys(key.DELETE).perform();
+    action.sendKeys(key.DELETE).perform();
 
+
+}
 
 
     clickWithWait(element) {
@@ -39,8 +51,6 @@ class Page {
     }
     fillWithWait(element,k) {
         let field = this.driver.wait(webdriver.until.elementLocated(element), Twait);
-       // field.clear();
-        //field.sendKeys(key.chord(key.CONTROL, "a"), "55");
         field.sendKeys(k);
 
     }

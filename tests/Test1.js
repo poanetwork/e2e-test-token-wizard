@@ -14,6 +14,11 @@ const wizStep3=require('../pages/WizardStep3.js');
 const wizStep4=require('../pages/WizardStep4.js');
 const baseTest=require('./BaseTest.js');
 const tierpage=require('../pages/TierPage.js');
+const reservedTokensPage=require('../pages/ReservedTokensPage.js');
+const ReservedTokensPage=reservedTokensPage.ReservedTokensPage;
+const whitelistPage=require('../pages/WhitelistPage.js');
+const WhitelistPage=whitelistPage.WhitelistPage;
+
 const TierPage=tierpage.TierPage;
 const utils=require('../utils/Utils.js');
 const openAnotherTab=utils.openAnotherTab;
@@ -58,12 +63,18 @@ class Test1 extends baseTest.BaseTest {
         var crowdsalePage = new crowdPage.CrowdsalePage(this.driver);
         var investPage = new invest.InvestPage(this.driver);
         var cur=Currency.createCurrency(this.currencyFile);
+        //cur.print();
+        //return;
+
 
         var tiers=[];
         for (var i=0;i<cur.tiers.length;i++)
             tiers.push(new TierPage(this.driver,cur.tiers[i]));
 
-      //Steps....
+
+           var reservedTokens=new ReservedTokensPage(this.driver);
+
+           //Steps....
 var installMetaMask=utils.getInstallMetamask(this.configFile);
 
 if (installMetaMask) {
@@ -78,9 +89,22 @@ if (installMetaMask) {
         wizardStep1.clickButtonContinue();
         this.driver.sleep(2000);
         wizardStep2.fillName(cur.name);
+
         wizardStep2.fillTicker(cur.ticker);
         wizardStep2.fillDecimals(cur.decimals);
+
+       for (var i=0;i<cur.reservedTokens.length;i++)
+       {reservedTokens.fillReservedTokens(cur.reservedTokens[i]);
+        reservedTokens.clickButtonAddReservedTokens();
+       }
+
+
         wizardStep2.clickButtonContinue();
+
+       wizardStep3.fillWalletAddress(cur.walletAddress);
+       wizardStep3.setGasPrice(cur.gasPrice);
+       if (cur.whitelisting) wizardStep3.clickCheckboWhitelistYes();
+       else (wizardStep3.fillMinCap(cur.minCap));
 
         for (var i=0;i<cur.tiers.length-1;i++)
         {
@@ -89,12 +113,14 @@ if (installMetaMask) {
 
         }
         tiers[cur.tiers.length-1].fillTier();
+
+
+
         wizardStep3.clickButtonContinue();
+
         this.driver.sleep(2000);
         this.driver.findElement(buttonContinue.buttonContinue)
             .catch(()=>{throw new Error('incorrect data in tiers');});
-
-
 
         metaMask.switchToAnotherPage();
 

@@ -1,8 +1,5 @@
-console.log(module.filename);
-
-
 class Tier{
-    constructor(name,allowModify,rate,supply,startTime,startDate,endTime,endDate){
+    constructor(name,allowModify,rate,supply,startTime,startDate,endTime,endDate,whitelist){
 
 
         this.name=name;
@@ -13,6 +10,7 @@ class Tier{
         this.startDate=startDate;
         this.endTime=endTime;
         this.endDate=endDate;
+        this.whitelist=whitelist;
     }
 
 
