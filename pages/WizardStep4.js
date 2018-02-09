@@ -1,4 +1,4 @@
-console.log(module.filename);
+
 const page=require('./Page.js');
 const webdriver = require('selenium-webdriver'),
     chrome = require('selenium-webdriver/chrome'),
@@ -15,7 +15,7 @@ class WizardStep4 extends page.Page{
 
     constructor(driver){
         super(driver);
-        this.URL='https://wizard.poa.network/4';
+        this.URL;
 
 
     }

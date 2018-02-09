@@ -12,19 +12,22 @@ class ReservedTokensPage extends Page{
 
     constructor(driver) {
         super(driver);
-        this.URL = 'https://wizard.poa.network/2';
+        this.URL;
 
     }
 
 
-
-
-
-
     fillReservedTokens(reservedTokens){
-        this.fillAddress(reservedTokens.address);
-        this.setDimension(reservedTokens.dimension);
-        this.fillValue(reservedTokens.value);
+
+      try {
+          if (reservedTokens.address == undefined) return;
+
+
+          this.fillAddress(reservedTokens.address);
+          this.setDimension(reservedTokens.dimension);
+          this.fillValue(reservedTokens.value);
+      }
+      catch (err){console.log("Reserved tokens: Incorrect data")}
 
     }
 

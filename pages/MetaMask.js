@@ -1,5 +1,3 @@
-//"use strict";
-console.log(module.filename);
 const key = require('selenium-webdriver').Key;
 const page=require('./Page.js');
 const webdriver = require('selenium-webdriver'),
@@ -7,7 +5,7 @@ const webdriver = require('selenium-webdriver'),
       firefox = require('selenium-webdriver/firefox'),
       by = require('selenium-webdriver/lib/by');
 const By=by.By;
-
+//"chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn//popup.html"
 const IDMetaMask="nkbihfbeogaeaoehlefnkodbefgpgknn";
 const URL="chrome-extension://"+IDMetaMask+"//popup.html";
 const passMetaMask="kindzadza";
@@ -25,19 +23,27 @@ const fieldConfirmPass=By.xpath("//*[@id=\"password-box-confirm\"]");
 const buttonCreate=By.xpath("//*[@id=\"app-content\"]/div/div[4]/div/button");
 const fieldSecretWords=By.xpath("//*[@id=\"app-content\"]/div/div[4]/div/textarea");
 const buttonIveCopied=By.xpath("//*[@id=\"app-content\"]/div/div[4]/div/button[1]");
-const popupNetwork=By.xpath("//*[@id=\"network_component\"]/div/i");
-const popupRinkeby=By.className("menu-icon golden-square");
+//const popupNetwork=By.xpath("//*[@id=\"network_component\"]/div/i");
+const popupNetwork=By.className("network-name");
+//const popupRinkeby=By.className("menu-icon golden-square");
+const popupRinkeby=By.css("Rinkeby Test Network");
+
+
 const popupAccount=By.xpath("//*[@id=\"app-content\"]/div/div[1]/div/div[2]/span/div");
 const popupImportAccount=By.xpath("//*[@id=\"app-content\"]/div/div[1]/div/div[2]/span/div/div/span/div/li[3]/span");
 const popupImportAccountCSS="#app-content > div > div.full-width > div > div:nth-child(2) > span > div > div > span > div > li:nth-child(4) > span";
 const fieldPrivateKey=By.xpath("//*[@id=\"private-key-box\"]");
 const pass="kindzadza";
-//const privateKey="03c06a9fab22fe0add145e337c5a8251e140f74468d72eab17ec7419ab812cd0";
-//const address="0xF16AB2EA0a7F7B28C267cbA3Ed211Ea5c6e27411";
 const buttonImport=By.xpath("//*[@id=\"app-content\"]/div/div[4]/div/div[3]/button");
 const secretWords="mask divorce brief insane improve effort ranch forest width accuse wall ride";
 const amountEth=By.xpath("//*[@id=\"app-content\"]/div/div[4]/div/div/div[2]/div[1]/div/div/div[1]/div[1]");
+const fieldNewRPCURL=By.id("new_rpc");
+const buttonSave=By.xpath("//*[@id=\"app-content\"]/div/div[4]/div/div[3]/div/div[2]/button");
+//const arrowBackRPCURL=By.className("fa fa-arrow-left fa-lg cursor-pointer");
+const arrowBackRPCURL=By.xpath("//*[@id=\"app-content\"]/div/div[4]/div/div[1]/i");
 
+var lengthNetworkMenu=6;
+var networks=[];
 
 
 
@@ -96,35 +102,89 @@ class MetaMask extends page.Page{
 activate(){
     super.clickWithWait(buttonAccept);
     const action=this.driver.actions();
-    action.click(this.driver.findElement(agreement)).perform();
-
+     action.click(this.driver.findElement(agreement)).perform();
+    //this.driver.findElement(agreement).click();
+   // this.driver.sleep(2000);
     for (var i=0;i<9;i++) {
-        action.sendKeys(key.TAB).perform();
+      action.sendKeys(key.TAB).perform();
+        //this.driver.findElement(agreement).sendKeys(key.TAB);
     }
     super.clickWithWait(buttonAccept);
     super.fillWithWait(fieldNewPass,pass);
     super.fillWithWait(fieldConfirmPass,pass);
     super.clickWithWait(buttonCreate);
     this.driver.sleep(1500);
-    this.driver.findElement(fieldSecretWords).getText().then(console.log);
+   // this.driver.findElement(fieldSecretWords).getText().then(console.log);
     super.clickWithWait(buttonIveCopied);
-    super.clickWithWait(popupNetwork);
-    this.driver.executeScript("document.getElementsByClassName('menu-icon golden-square')[0].click();");
+    this.chooseProvider();
+
     super.clickWithWait(popupAccount);
     this.driver.executeScript("document.getElementsByClassName('dropdown-menu-item')[2].click();");
+
+
     super.fillWithWait(fieldPrivateKey,this.wallet.privateKey);
     this.driver.sleep(1500);
     super.clickWithWait(buttonImport);
-    this.driver.sleep(1500);
-    this.driver.findElement(amountEth).getText().then(console.log);
+   // this.driver.sleep(1500);
+    //this.driver.findElement(amountEth).getText().then(console.log);
+}
+
+async isElementPresent(element)
+{
+    return await super.isElementPresent(element);
+}
+
+chooseProvider(){
+    super.clickWithWait(popupNetwork);
+
+        var n;
+switch(this.wallet.networkID)
+{
+    case 0:{n=0;break;} //Olympic=>Main
+    case 1:{n=0;break;} //Main
+    case 2:{n=0;break;} //Mordern=>Main
+    case 3:{n=1;break;} //Ropsten
+    case 4:{n=3;break;} //Rinkeby
+    case 8545:{n=4;break;} //localhost8545
+    case 42:{n=2;break;} //Kovan
+    default:{
+
+        this.addNetwork();
+    }
+}
+if (n<=4)this.driver.executeScript("document.getElementsByClassName('dropdown-menu-item')["+n+"].click();");
+
+}
+    addNetwork(){
+        var url;
+
+        switch(this.wallet.networkID)
+        {
+            case 77:{url="https://sokol.poa.network";break;}//Sokol
+            case 99:{url="https://core.poa.network";break;} //POA
+            case 7762959:{url="https://sokol.poa.network";break;} //Musicoin=>SOKOL
+            default:{throw("RPC Network not found. Check 'networkID' in account.json");}
+        }
+        this.driver.executeScript("" +
+            "document.getElementsByClassName('dropdown-menu-item')["+(lengthNetworkMenu-1)+"].click();");
+        super.fillWithWait(fieldNewRPCURL,url);
+        super.clickWithWait(buttonSave);
+
+        this.driver.sleep(1000);
+        super.clickWithWait(arrowBackRPCURL);
+        lengthNetworkMenu++;
+
+
+
+
+    };
 
 
 
 }
 
-
-}
-module.exports={MetaMask:MetaMask,
-    buttonSubmit:buttonSubmit,
+module.exports={
+    MetaMask:MetaMask,
+    buttonSubmit:buttonSubmit
 
 }

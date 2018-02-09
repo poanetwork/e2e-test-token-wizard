@@ -22,7 +22,7 @@ class WizardStep3 extends page.Page{
 
     constructor(driver){
         super(driver);
-        this.URL='https://wizard.poa.network/3';
+        this.URL;
         this.tier;
 
     }

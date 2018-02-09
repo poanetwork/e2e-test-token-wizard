@@ -1,4 +1,6 @@
 {
   "startURL" : "https://wizard.poa.network/",
-  "installMetaMask":true
+  "installMetaMask":true,
+  "scenario":"T1RnWn.json"
+
 }

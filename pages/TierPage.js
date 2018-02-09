@@ -56,7 +56,7 @@ class TierPage extends page.Page{
 
     constructor(driver,tier){
         super(driver);
-        this.URL='https://wizard.poa.network/1';
+        this.URL;
         this.tier=tier;
         this.number=COUNT_TIERS++;
 

@@ -12,8 +12,7 @@ class InvestPage extends page.Page{
 
     constructor(driver){
         super(driver);
-        this.URL='https://wizard.poa.network/invest?addr=0xA925660b2EFbcd1d2230d926c816a3a298A3aA77&networkID=4';
-
+        this.URL;
 
     }
 

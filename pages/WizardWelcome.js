@@ -1,4 +1,4 @@
-console.log(module.filename);
+
 const page=require('./Page.js');
 const webdriver = require('selenium-webdriver'),
       chrome = require('selenium-webdriver/chrome'),
@@ -12,12 +12,9 @@ class WizardWelcome extends page.Page{
 
     constructor(driver,URL){
         super(driver);
-        this.URL=URL;//"https://wizard.poa.network/";
+        this.URL=URL;
 
     }
-
-
-
 
     open()
     {
@@ -26,14 +23,14 @@ class WizardWelcome extends page.Page{
     }
 
     clickButtonNewCrowdsale(){
+        super.clickWithWait(buttonNewCrowdsale);
 
-        this.driver.findElement(buttonNewCrowdsale).click();
+
 
     }
     clickLinkTokenMarket(){
-
-        this.driver.findElement(linkTokenMarket).click();
-    }
+        super.clickWithWait(linkTokenMarket);
+        }
 
     open()
     {

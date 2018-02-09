@@ -16,17 +16,16 @@ class Page {
         this.header;
     }
 
-// async
- isElementPresent(element) {
-    /* var q;
+ async  isElementPresent(element) {
+     var q;
      try {
          q = await this.driver.findElement(element).isDisplayed();
      } catch (err) {
          q = false;
      }
 
-     return q;*/
-     return this.driver.findElements(element);
+     return q;
+
      }
 
 

@@ -14,7 +14,7 @@ class WizardStep2 extends page.Page {
 
     constructor(driver) {
         super(driver);
-        this.URL = 'https://wizard.poa.network/2';
+        this.URL;
     }
 
 fillName(name){
