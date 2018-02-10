@@ -34,7 +34,7 @@ const crowdPage=require('../pages/CrowdsalePage.js');
 const invest=require('../pages/InvestPage.js');
 const StartBrowserWithMetamask=require('../utils/Utils.js');
 const startBrowserWithMetamask=StartBrowserWithMetamask.startBrowserWithMetamask;
-const timeLimitTransactions=100;
+const timeLimitTransactions=80;
 //Check isCurrencyCreated
 class Test1 extends baseTest.BaseTest {
     constructor(driver,configFile) {
@@ -76,6 +76,7 @@ class Test1 extends baseTest.BaseTest {
            var reservedTokens=new ReservedTokensPage(this.driver);
 
            //Steps....
+
 var installMetaMask=utils.getInstallMetamask(this.configFile);
 
 if (installMetaMask) {
@@ -136,7 +137,7 @@ if (installMetaMask) {
         //var before = utils.getTransactionCount(metaMask.wallet.account);
         var trCounter=0;
         var b=true;
-        var timeLimit=timeLimitTransactions
+        var timeLimit=timeLimitTransactions*cur.tiers.length;
         do {
             metaMask.switchToAnotherPage();
             this.driver.sleep(6000);
@@ -148,7 +149,7 @@ if (installMetaMask) {
                 console.log("Transaction#"+trCounter);
             }
             welcomePage.switchToAnotherPage();
-           // this.driver.sleep(1000);
+           this.driver.sleep(1000);
             if (!(await trPage.isTitlePresent())) {
                 this.driver.sleep(2000);
                 trPage.clickButtonOk();

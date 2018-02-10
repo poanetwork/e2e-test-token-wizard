@@ -6,7 +6,7 @@ const webdriver = require('selenium-webdriver'),
       by = require('selenium-webdriver/lib/by');
 
 const buttonNewCrowdsale=by.By.css("#root > div > div:nth-child(2) > section > div.crowdsale > div > div > a > span");
-const linkTokenMarket=by.By.xpath("//*[@id=\"root\"]/div/div[1]/section/div[1]/div/p/a");
+const buttonChooseContract=by.By.xpath("//*[@id=\"root\"]/div/div[1]/section/div[1]/div/div/div");
 
 class WizardWelcome extends page.Page{
 
@@ -28,8 +28,8 @@ class WizardWelcome extends page.Page{
 
 
     }
-    clickLinkTokenMarket(){
-        super.clickWithWait(linkTokenMarket);
+    clickButtonChooseContract(){
+        super.clickWithWait(buttonChooseContract);
         }
 
     open()
@@ -37,9 +37,7 @@ class WizardWelcome extends page.Page{
         this.driver.get(this.URL);
 
     }
-    createNewCrowdSale(){
-        this.clickButtonNewCrowdsale();
-    }
+
 
 
 }

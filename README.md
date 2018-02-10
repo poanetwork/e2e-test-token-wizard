@@ -125,7 +125,7 @@ See file's examples below or
 
  where networkID=
  ```
- 0,1,2 - Main Etherium network;
+ 0,1,2 - Main Ethereum network;
  3 - Ropsten;
  4 - Rinkeby;
  42 - Kovan;

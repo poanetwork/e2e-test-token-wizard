@@ -8,6 +8,7 @@ const Web3 = require('web3');
 
 class Utils {
 
+
      openAnotherTab(driver, URL) {
         driver.executeScript('window.open("' + URL + '");');
     }
@@ -97,6 +98,10 @@ class Utils {
         var obj = JSON.parse(fs.readFileSync(fileName, "utf8"));
         return obj.scenario;
 
+    }
+    zoom(driver,z){
+        driver.executeScript
+        ("document.body.style.zoom = '"+z+"'");
     }
 }
 module.exports={

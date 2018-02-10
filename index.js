@@ -2,6 +2,8 @@
 
 const test1=require('./tests/Test1.js');
 const Test1=test1.Test1;
+const test2=require('./tests/Test2.js');
+const Test2=test2.Test2;
 const utils=require('./utils/Utils.js');
 const Utils=utils.Utils;
 const page=require('./pages/Page.js');
@@ -28,10 +30,19 @@ function createPOACrowdsale(configFile) {
 
     var driver;
     var util=new Utils();
-    if (util.getInstallMetamask(configFile))
-     driver = util.startBrowserWithMetamask();
-    else driver=util.startBrowser();
-    var testWizard = new Test1(driver,configFile);
+   if (util.getInstallMetamask(configFile))
+        driver = util.startBrowserWithMetamask();
+    else
+        driver=util.startBrowser();
+
+
+   /* var testManage=new Test2(driver,configFile);
+    testManage.run();
+    return;*/
+
+
+
+   var testWizard = new Test1(driver,configFile);
     testWizard.run();
 
 }
