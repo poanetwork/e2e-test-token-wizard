@@ -1,5 +1,5 @@
 ## Scrypt for creating new crowdsale   https://wizard.poa.network/
-
+v.1.0.35 Added testing scenarios: ./scenarios
 
 ## Getting Started
 

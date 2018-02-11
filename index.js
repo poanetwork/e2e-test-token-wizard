@@ -24,7 +24,7 @@ const TierPage=tierpage.TierPage;
 const Web3 = require('web3');
 const fs = require('fs');
 ///////////////////////////////////////
-createPOACrowdsale('config.json');
+//createPOACrowdsale('config.json');
 
 function createPOACrowdsale(configFile) {
 
@@ -36,13 +36,7 @@ function createPOACrowdsale(configFile) {
         driver=util.startBrowser();
 
 
-   /* var testManage=new Test2(driver,configFile);
-    testManage.run();
-    return;*/
-
-
-
-   var testWizard = new Test1(driver,configFile);
+     var testWizard = new Test1(driver,configFile);
     testWizard.run();
 
 }
