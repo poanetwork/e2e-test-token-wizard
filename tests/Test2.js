@@ -18,9 +18,7 @@ const fs = require('fs');
 const metaMaskWallet=require('../entity/MetaMaskWallet.js');
 const MetaMaskWallet=metaMaskWallet.MetaMaskWallet;
 
- var testManage=new Test2(driver,configFile);
-   testManage.run();
-   return;*/
+
 
 
 

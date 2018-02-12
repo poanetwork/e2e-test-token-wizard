@@ -23,11 +23,6 @@ where:
 * ```config.json``` is _.json_ file in working directory (see example below) with configuration parameters.
 
 
-See file's examples below or 
-
-* ```~/node_modules/create-poa-crowdsale/config.json```
-
-
 ### Prerequisites
 
 * Google-chrome browser should be installed
