@@ -24,7 +24,7 @@ const TierPage=tierpage.TierPage;
 const Web3 = require('web3');
 const fs = require('fs');
 ///////////////////////////////////////
-createPOACrowdsale('config.json');
+//createPOACrowdsale('config.json');
 
 function createPOACrowdsale(configFile) {
     if (!fs.existsSync("./artifacts"))

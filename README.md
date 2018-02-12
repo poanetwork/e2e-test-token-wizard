@@ -1,5 +1,6 @@
 ## Scrypt for creating new crowdsale   https://wizard.poa.network/
-v.1.0.35 Added testing scenarios: ./scenarios
+v 1.0.35 Added testing scenarios: ./scenarios
+v 1.0.38 Added executable files
 
 ## Getting Started
 
@@ -21,6 +22,15 @@ v.1.0.35 Added testing scenarios: ./scenarios
 where:
 
 * ```config.json``` is _.json_ file in working directory (see example below) with configuration parameters.
+
+### Package include executable files 
+ * ```index-linux``` for Linux
+ * ```index-macos``` for macOS
+ * ```index-windows``` for Windows
+ 
+run with command   ```./<file_name>``` 
+
+root directory should contain ```config.json```, ```scenario.json```, ```MetaMask.crx```
 
 
 ### Prerequisites

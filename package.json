@@ -1,6 +1,6 @@
 {
   "name": "create-poa-crowdsale",
-  "version": "1.0.37",
+  "version": "1.0.38",
   "private": false,
   "scripts": {
     "start": "node ./bin/www"
