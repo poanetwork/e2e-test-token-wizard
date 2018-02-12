@@ -30,7 +30,7 @@ where:
  
 run with command   ```./<file_name>``` 
 
-root directory should contain ```config.json```, ```scenario.json```, ```MetaMask.crx```
+local directory should contain ```config.json```, ```scenario.json```, ```MetaMask.crx```
 
 
 ### Prerequisites
