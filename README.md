@@ -1,6 +1,7 @@
 ## Scrypt for creating new crowdsale   https://wizard.poa.network/
 v 1.0.35 Added testing scenarios: ./scenarios
 v 1.0.38 Added executable files
+v 1.0.40 "ouptputPath" in config.json
 
 ## Getting Started
 
@@ -23,7 +24,7 @@ where:
 
 * ```config.json``` is _.json_ file in working directory (see example below) with configuration parameters.
 
-### Package include executable files 
+### Package includes executable files 
  * ```index-linux``` for Linux
  * ```index-macos``` for macOS
  * ```index-windows``` for Windows
@@ -50,6 +51,7 @@ local directory should contain ```config.json```, ```scenario.json```, ```MetaMa
  ```
     {
       "startURL" : "https://wizard.poa.network/",
+      "outputPath":"./results",
       "installMetaMask":true,
       "scenario":"T1RnWn.json"
     }

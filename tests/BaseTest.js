@@ -1,4 +1,4 @@
-console.log(module.filename);
+
 const webdriver = require('selenium-webdriver'),
       chrome = require('selenium-webdriver/chrome'),
       firefox = require('selenium-webdriver/firefox'),

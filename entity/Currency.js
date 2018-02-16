@@ -1,4 +1,4 @@
-console.log(module.filename);
+
 const fs = require('fs');
 const tier=require('./Tier.js');
 const Tier=tier.Tier;

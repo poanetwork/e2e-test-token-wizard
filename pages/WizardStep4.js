@@ -5,7 +5,7 @@ const webdriver = require('selenium-webdriver'),
     firefox = require('selenium-webdriver/firefox'),
     by = require('selenium-webdriver/lib/by');
 const By=by.By;
-
+                                 //*[@id="root"]/div/section/div[3]/a
 const buttonContinue=By.xpath("//*[@id=\"root\"]/div/section/div[3]/a");
 const buttonDownload=By.xpath("//*[@id=\"root\"]/div/section/div[3]/div");
 const blueScreen=By.xpath('//*[@id="root"]/div/section/div[4]/div[2]/div');

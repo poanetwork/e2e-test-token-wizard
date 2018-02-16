@@ -9,7 +9,7 @@ const Web3 = require('web3');
 class Utils {
 
 
-     openAnotherTab(driver, URL) {
+    openAnotherTab(driver, URL) {
         driver.executeScript('window.open("' + URL + '");');
     }
 
@@ -18,13 +18,13 @@ class Utils {
         driver.switchTo().alert().accept();
     }
 
-    getStartURL(fileName) {
+    static getStartURL(fileName) {
         var obj = JSON.parse(fs.readFileSync(fileName, "utf8"));
         return obj.startURL;
 
     }
 
-    getInstallMetamask(fileName) {
+    static getInstallMetamask(fileName) {
         var obj = JSON.parse(fs.readFileSync(fileName, "utf8"));
         return obj.installMetaMask;
 
@@ -48,23 +48,17 @@ class Utils {
         return n;
     }
 
-    takeScreenshoot(driver, path) {
+    static takeScreenshoot(driver, path) {
         driver.takeScreenshot()
             .then((res) => {
                 //console.log(res);
                 var d = new Date();
                 var buf = new Buffer(res, 'base64');
-
-
-                fs.writeFileSync('./artifacts/screenshoot' + d.getTime() + '.png', buf);//for circleci
-                fs.writeFileSync(path + "/screenshoot" + d.getTime() + '.png', buf);
+                fs.writeFileSync(path + "/screenshoot" + Utils.getDate() + '.png', buf);
             });
 
     }
-
-
-
-    startBrowser() {
+    static startBrowser() {
         var options = new chrome.Options();
         //options.addArguments("user-data-dir=/home/d/GoogleProfile");
         //options.addArguments('start-maximized');
@@ -75,8 +69,7 @@ class Utils {
     }
 
 
-
-    startBrowserWithMetamask() {
+    static startBrowserWithMetamask() {
         var source = 'MetaMask.crx';
         if (!fs.existsSync(source)) source = './node_modules/create-poa-crowdsale/MetaMask.crx';
         console.log(source);
@@ -92,18 +85,28 @@ class Utils {
 
     }
 
+    static getDate() {
+        var d = new Date();
+        var date = "_" + (d.getMonth() + 1) + "_" + d.getDate() + "_"
+            + d.getFullYear() + "_" + d.getHours() + "_" + d.getMinutes() + "_" + d.getSeconds();
+        return date;
+    }
 
+    static getOutputPath(fileName) {
+        var obj = JSON.parse(fs.readFileSync(fileName, "utf8"));
+        return obj.outputPath;
 
-    getScenarioFile(fileName) {
+    }
+
+    static getScenarioFile(fileName) {
         var obj = JSON.parse(fs.readFileSync(fileName, "utf8"));
         return obj.scenario;
 
     }
-    zoom(driver,z){
+
+    static zoom(driver, z) {
         driver.executeScript
-        ("document.body.style.zoom = '"+z+"'");
+        ("document.body.style.zoom = '" + z + "'");
     }
 }
-module.exports={
-    Utils:Utils
-}
+module.exports.Utils=Utils;

@@ -2,8 +2,8 @@
   "privateKey": "03c06a9fab22fe0add145e337c5a8251e140f74468d72eab17ec7419ab812cd0",
   "networkID":4,
 
-  "name": "T2RnWy 02/10/18",
-  "ticker": "test",
+  "name": "T2RnWy_0001",
+  "ticker": "t0001",
   "decimals": 3,
   "reservedTokens":[
     {

@@ -1,0 +1,51 @@
+{ "account": "0xF16AB2EA0a7F7B28C267cbA3Ed211Ea5c6e27411",
+  "privateKey": "03c06a9fab22fe0add145e337c5a8251e140f74468d72eab17ec7419ab812cd0",
+  "networkID":4,
+
+  "name": "T1RyWy_0013.json",
+  "ticker": "t0013",
+  "decimals": 3,
+  "reservedTokens":[
+    {
+      "address" :"0x27F2f56e6Ee35E4995A965337ba2A7b4ec492FcC",
+      "dimension": "percentage",
+      "value": 60
+    },
+    {
+      "address" :"0x41B4073E966c169dB22185805A951A0f1b805320",
+      "dimension": "tokens",
+      "value": 2000
+    }
+
+
+
+
+  ],
+  "walletAddress":"0xF16AB2EA0a7F7B28C267cbA3Ed211Ea5c6e27411",
+  "gasprice": 40,
+  "mincap": 1,
+  "whitelisting":true,
+  "tiers":[
+    {
+      "name":"###1",
+      "allowModify": false,
+      "startDate": "02/14/2018",
+      "startTime": "10:125am",
+      "endDate":"02/14/2018",
+      "endTime":"10:40am",
+      "rate":1000,
+      "supply": 1000,
+      "whitelist":[
+        {
+          "address":"0x27F2f56e6Ee35E4995A965337ba2A7b4ec492FcC",
+          "min":50,
+          "max":500
+        },
+        {
+          "address":"0x41B4073E966c169dB22185805A951A0f1b805320",
+          "min":8,
+          "max":55
+        }]
+    }]
+
+}

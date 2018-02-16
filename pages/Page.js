@@ -6,7 +6,7 @@ const webdriver = require('selenium-webdriver'),
 const key = require('selenium-webdriver').Key;
 const Twait=20000;
 
-console.log(module.filename);
+
 class Page {
 
     constructor(driver){
@@ -42,7 +42,9 @@ clearField(element){
 
 
 }
-
+oneClick(element){
+      this.driver.findElement(element).click();
+}
 
     clickWithWait(element) {
         let button = this.driver.wait(webdriver.until.elementLocated(element), Twait);

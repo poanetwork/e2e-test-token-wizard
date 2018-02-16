@@ -41,7 +41,7 @@ const fieldNewRPCURL=By.id("new_rpc");
 const buttonSave=By.xpath("//*[@id=\"app-content\"]/div/div[4]/div/div[3]/div/div[2]/button");
 //const arrowBackRPCURL=By.className("fa fa-arrow-left fa-lg cursor-pointer");
 const arrowBackRPCURL=By.xpath("//*[@id=\"app-content\"]/div/div[4]/div/div[1]/i");
-
+var accN=2;
 var lengthNetworkMenu=6;
 var networks=[];
 
@@ -179,6 +179,12 @@ if (n<=4)this.driver.executeScript("document.getElementsByClassName('dropdown-me
 
     };
 
+    createAccount(){
+        super.clickWithWait(popupAccount);
+        this.driver.executeScript(
+            "document.getElementsByClassName('dropdown-menu-item')["+accN+"].click();");
+
+    }
 
 
 }

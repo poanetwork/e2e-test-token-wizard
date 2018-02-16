@@ -21,8 +21,8 @@ const transactionPage=require('../pages/TransactionPage.js');
 const TransactionPage=transactionPage.TransactionPage;
 
 const TierPage=tierpage.TierPage;
-const utils=require('../utils/Utils.js');
-const Utils=utils.Utils;
+const util=require('../utils/Utils.js');
+const Utils=util.Utils;
 const Web3 = require('web3');
 const fs = require('fs');
 const currency= require('../entity/Currency.js');
@@ -32,8 +32,6 @@ const MetaMaskWallet=metaMaskWallet.MetaMaskWallet;
 const buttonContinue=require('../pages/WizardStep4.js');
 const crowdPage=require('../pages/CrowdsalePage.js');
 const invest=require('../pages/InvestPage.js');
-const StartBrowserWithMetamask=require('../utils/Utils.js');
-const startBrowserWithMetamask=StartBrowserWithMetamask.startBrowserWithMetamask;
 const timeLimitTransactions=80;
 //Check isCurrencyCreated
 class Test1 extends baseTest.BaseTest {
@@ -43,19 +41,23 @@ class Test1 extends baseTest.BaseTest {
 
     }
     async run() {
-//@Before method
-        var utils=new Utils();
-        var d=new Date();
 
-        var outputDirectory="./results"+d.getTime();
+      var outputPath=Utils.getOutputPath('config.json');
 
-        fs.mkdirSync(outputDirectory);
-        fs.writeFileSync(outputDirectory+'/result.log', "Test start time:"+d.getTime());
+      if ((typeof outputPath)== "undefined") outputPath="./results";
 
-        var startURL=utils.getStartURL(this.configFile);
-        if ((typeof startURL)=="undefined")startURL="https://wizard.poa.network/";
+        if (!fs.existsSync(outputPath))
+            fs.mkdirSync(outputPath);
+        var outputPath=outputPath+"/result"+Utils.getDate();
+        if (!fs.existsSync(outputPath))
+        fs.mkdirSync(outputPath);
+        var outputFile=outputPath+"/results"+Utils.getDate()+".log";
+        fs.writeFileSync(outputFile, "Test start time:"+Utils.getDate()+"\n");
+        ////////////
+        var startURL=Utils.getStartURL(this.configFile);
+        if (typeof startURL=="undefined")startURL="https://wizard.poa.network/";
 
-        var scenarioFile=utils.getScenarioFile(this.configFile);
+        var scenarioFile=Utils.getScenarioFile(this.configFile);
 
         var welcomePage = new wizardWelcome.WizardWelcome(this.driver,startURL);
         var wallet=MetaMaskWallet.createMetaMaskWallet(scenarioFile);
@@ -77,7 +79,7 @@ class Test1 extends baseTest.BaseTest {
 
            //Steps....
 
-var installMetaMask=utils.getInstallMetamask(this.configFile);
+var installMetaMask=Utils.getInstallMetamask(this.configFile);
 
 if (installMetaMask) {
     metaMask.open();
@@ -100,8 +102,10 @@ if (installMetaMask) {
              reservedTokens.fillReservedTokens(cur.reservedTokens[i]);
              reservedTokens.clickButtonAddReservedTokens();
             }
+       Utils.zoom(this.driver,0.5);
+        Utils.takeScreenshoot(this.driver,outputPath);
+        Utils.zoom(this.driver,1);
 
-       utils.takeScreenshoot(this.driver,outputDirectory);
 
         wizardStep2.clickButtonContinue();
 
@@ -109,18 +113,18 @@ if (installMetaMask) {
        wizardStep3.setGasPrice(cur.gasPrice);
        if (cur.whitelisting) wizardStep3.clickCheckboWhitelistYes();
        else (wizardStep3.fillMinCap(cur.minCap));
-       utils.takeScreenshoot(this.driver,outputDirectory);
+        Utils.takeScreenshoot(this.driver,outputPath);
 
         for (var i=0;i<cur.tiers.length-1;i++)
         {
         tiers[i].fillTier();
-           utils.takeScreenshoot(this.driver,outputDirectory);
+            Utils.takeScreenshoot(this.driver,outputPath);
 
             wizardStep3.clickButtonAddTier();
 
         }
         tiers[cur.tiers.length-1].fillTier();
-       utils.takeScreenshoot(this.driver,outputDirectory);
+        Utils.takeScreenshoot(this.driver,outputPath);
 
 
 
@@ -134,7 +138,7 @@ if (installMetaMask) {
 
 //////////////////////////////////////////////////////////////////////////////
        var trPage=new TransactionPage(this.driver);
-        //var before = utils.getTransactionCount(metaMask.wallet.account);
+        //var before = Utils.getTransactionCount(metaMask.wallet.account);
         var trCounter=0;
         var b=true;
         var timeLimit=timeLimitTransactions*cur.tiers.length;
@@ -157,16 +161,17 @@ if (installMetaMask) {
             }
             if((timeLimit--)==0)
             {  var s="Deployment failed.Transaction were done:"+ trCounter;
-               fs.appendFileSync(outputDirectory+'/result.log',"\n"+s);
+               fs.appendFileSync(outputFile,s+"\n");
                console.log(s);
                b=false;}
         } while (b);
 
 
-        utils.takeScreenshoot(this.driver,outputDirectory);
+        Utils.takeScreenshoot(this.driver,outputPath);
+        this.driver.sleep(5000);
         wizardStep4.clickButtonContinue();
         this.driver.sleep(5000);
-         utils.takeScreenshoot(this.driver,outputDirectory);
+        Utils.takeScreenshoot(this.driver,outputPath);
         //this.driver.sleep(10000);
        b=true;
        var counter=30;
@@ -181,16 +186,16 @@ if (installMetaMask) {
                 counter++;
             }
         } while (b);
-        utils.takeScreenshoot(this.driver,outputDirectory);
+        Utils.takeScreenshoot(this.driver,outputPath);
         this.driver.getCurrentUrl().then((res)=>{
             console.log("Final invest page link: "+res);
-            fs.appendFileSync(outputDirectory+'/result.log', "\n\Final invest page link: \""+res);
-            fs.writeFileSync('./artifacts/result.log', res);//for circleci
+            fs.appendFileSync(outputFile, "\n\Final invest page link: \""+res+"\n");
+
           });
         s="Transaction were done: "+ trCounter;
         console.log(s);
-        fs.appendFileSync(outputDirectory+'/result.log',s);
-        fs.appendFileSync(outputDirectory+'/result.log', "Test end time:"+new Date().getTime());
+        fs.appendFileSync(outputFile,s);
+        fs.appendFileSync(outputFile, "Test end time:"+Utils.getDate()+"\n");
 
         return;
 

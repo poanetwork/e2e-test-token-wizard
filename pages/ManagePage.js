@@ -2,14 +2,10 @@ const by = require('selenium-webdriver/lib/by');
 const page=require('./Page.js');
 const Page=page.Page;
 const By=by.By;
-const fieldContract1="//*[@id=\"root\"]/div/div[1]/section/div[3]/div/div[1]/div/div[2]/div["
 
-const fieldContract2="]/div";
-const buttonContinue=By.xpath("//*[@id=\"root\"]/div/div[1]/section/div[3]/div/div[1]/div/div[3]/div");
-                               //*[@id="root"]/div/div[1]/section/div[3]/div/div[1]/div/div[2]/div[1]/div
-                               //*[@id="root"]/div/div[1]/section/div[3]/div/div[1]/div/div[2]/div[1]/div
-const contracts=By.className("text");
-//const contracts=By.className("table-row clickable");
+const firstContract=By.xpath("//*[@id=\"root\"]/div/div[1]/section/div[3]/div/div[1]/div/div[2]/div[1]/div");
+const buttonDistribute=By.xpath("//*[@id=\"root\"]/div/section/div[1]/div/a/span");
+const buttonFinalize=By.xpath("//*[@id=\"root\"]/div/section/div[2]/div/a/span");
 
 class ManagePage extends Page
 {
@@ -18,29 +14,37 @@ class ManagePage extends Page
         this.URL;
 
     }
+    //https://wizard.poa.network/manage/0x7eB29E0922C87D728c81A9FAB66e97668c917108
+open(){
 
-   async selectContracts(contract){
-        for (var i=1;i<100;i++) {
-            var s = By.xpath("" + fieldContract1 + i + fieldContract2);
-            this.driver.findElement(s).click();
-            var q = await this.driver.findElement(s).getText();
-            if (q.toString() == contract) {this.driver.findElement(s).click();i=1000;}
+this.driver.get(this.URL);
 
-        }
+}
+async isAvailable(){
+       return await super.isElementPresent(firstContract);
+}
+async isAvailableDistribute(){
+    return await this.driver.findElement(buttonDistribute).isEnabled();
+}
+async isAvailableFinalize(){
+    return await this.driver.findElement(buttonFinalize).isEnabled();
+}
+async isPresentButtonFinalize(){
+    return await super.isElementPresent(buttonFinalize);
+}
 
+async clickButtonDistribute(){
+     super.clickWithWait(buttonDistribute);
+}
 
-
-
-
+    clickButtonFinalize(){
+        this.driver.sleep(500);
+        super.clickWithWait(buttonFinalize);
     }
 
-    clickContract(contract){
 
 
-    }
-    clickButtonContinue(){
-        super.clickWithWait(buttonContinue);
-    }
+
 
 
 

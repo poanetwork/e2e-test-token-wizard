@@ -1,5 +1,6 @@
 {
   "startURL" : "https://wizard.poa.network/",
+  "outputPath":"./resultswefwef",
   "installMetaMask":true,
-  "scenario":"T1RyWn_0008.json"
+  "scenario":"./scenarios/T1RnWy.json"
 }

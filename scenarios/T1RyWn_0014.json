@@ -1,0 +1,1018 @@
+{
+  "account": "0xF16AB2EA0a7F7B28C267cbA3Ed211Ea5c6e27411",
+  "privateKey": "03c06a9fab22fe0add145e337c5a8251e140f74468d72eab17ec7419ab812cd0",
+  "networkID":4,
+
+  "name": "T1RyWn_0014.json",
+  "ticker": "t0014",
+  "decimals": 3,
+  "reservedTokens":[
+
+    {
+      "address" :"0xF16AB2EA0a7F7B28C267cbA3Ed211Ea5c6e27411",
+      "dimension": "percentage",
+      "value": 1
+    },
+    {
+      "address" :"0xF16AB2EA0a7F7B28C267cbA3Ed211Ea5c6e27411",
+      "dimension": "tokens",
+      "value": 2
+    },
+    {
+      "address" :"0x40cAa4BF6893dF91638305cFCf98CB8E7Fa8D17F",
+      "dimension": "percentage",
+      "value": 3
+    },
+    {
+      "address" :"0x40cAa4BF6893dF91638305cFCf98CB8E7Fa8D17F",
+      "dimension": "tokens",
+      "value": 4
+    },
+    {
+      "address" :"0x41B4073E966c169dB22185805A951A0f1b805320",
+      "dimension": "percentage",
+      "value": 5
+    },
+    {
+      "address" :"0x41B4073E966c169dB22185805A951A0f1b805320",
+      "dimension": "tokens",
+      "value": 6
+    },
+    {
+      "address" :"0x56B2e3C3cFf7f3921Dc2e0F8B8e20d1eEc29216b",
+      "dimension": "percentage",
+      "value":7
+    },
+    {
+      "address" :"0x27F2f56e6Ee35E4995A965337ba2A7b4ec492FcC",
+      "dimension": "tokens",
+      "value": 8
+    },
+    {
+      "address" :"0xd13c7924241E51Eb013003490736e6169a15786a",
+      "dimension": "percentage",
+      "value": 9
+    },
+    {
+      "address" :"0xBC4023Baef7B812c23f21bc0b108A188243b07Cb",
+      "dimension": "tokens",
+      "value": 10
+    }, {
+      "address" :"0x2589bd7D8A58Ac9A4aC01d68A7c63315ef184c63",
+      "dimension": "percentage",
+      "value": 11
+    },
+    {
+      "address" :"0xF3eA35DB8F0058b4e0aD45F883172E92fdCb4B82",
+      "dimension": "tokens",
+      "value": 12
+    }, {
+      "address" :"0xb3b4F4b5568BB6dF78e4d96Ad30A5538C913D495",
+      "dimension": "percentage",
+      "value": 13
+    },
+    {
+      "address" :"0x16926399BAF474Cd314E6425ace67A88EA5BeA11",
+      "dimension": "tokens",
+      "value": 14
+    }, {
+      "address" :"0xE98055678d8e8724E5106b059e88557a99561007",
+      "dimension": "percentage",
+      "value": 15
+    },
+    {
+      "address" :"0x06554522da78D90015a12C5caaf96be2999ea3F9",
+      "dimension": "tokens",
+      "value": 16
+    }, {
+      "address" :"0x5537F8335625adB9f95Dfa6E7AfE3A2AF600084B",
+      "dimension": "percentage",
+      "value": 17
+    },
+    {
+      "address" :"0x1894F11ddf864CA1de4eB339512a79e199cbf194",
+      "dimension": "tokens",
+      "value": 18
+    }, {
+      "address" :"0xeec3B3A65E3157b19605911615218B33772d5da2",
+      "dimension": "percentage",
+      "value": 19
+    },
+    {
+      "address" :"0xec8Af49612F4EdfcD069B8cfe95552740c6849e0",
+      "dimension": "tokens",
+      "value": 20
+    }, {
+      "address" :"0x9613130348aC610732A391063CD70b5a8c186EfC",
+      "dimension": "percentage",
+      "value": 21
+    },
+    {
+      "address" :"0x7Bc397b1F42bB521cEadE2509f8deAF477C7BEd6",
+      "dimension": "tokens",
+      "value": 22
+    }, {
+      "address" :"0x8632cc8620f7aA794aC1a3b88e0D07E4BF133638",
+      "dimension": "percentage",
+      "value": 23
+    },
+    {
+      "address" :"0xd540257890329448fB721B6A1bB562Bb95BA0eb7",
+      "dimension": "tokens",
+      "value": 24
+    }, {
+      "address" :"0x8e4aD05Ae00C76a371B3Ab96AD739401ec63BCDA",
+      "dimension": "percentage",
+      "value": 25
+    },
+    {
+      "address" :"0xd3E49136aBdAda1EeD2df2ed7c7D530c1b54afcD",
+      "dimension": "tokens",
+      "value": 26
+    },
+    {
+      "address" :"0xF16AB2EA0a7F7B28C267cbA3Ed211Ea5c6e27411",
+      "dimension": "percentage",
+      "value": 1
+    },
+    {
+      "address" :"0xF16AB2EA0a7F7B28C267cbA3Ed211Ea5c6e27411",
+      "dimension": "tokens",
+      "value": 2
+    },
+    {
+      "address" :"0x40cAa4BF6893dF91638305cFCf98CB8E7Fa8D17F",
+      "dimension": "percentage",
+      "value": 3
+    },
+    {
+      "address" :"0x40cAa4BF6893dF91638305cFCf98CB8E7Fa8D17F",
+      "dimension": "tokens",
+      "value": 4
+    },
+    {
+      "address" :"0x41B4073E966c169dB22185805A951A0f1b805320",
+      "dimension": "percentage",
+      "value": 5
+    },
+    {
+      "address" :"0x41B4073E966c169dB22185805A951A0f1b805320",
+      "dimension": "tokens",
+      "value": 6
+    },
+    {
+      "address" :"0x56B2e3C3cFf7f3921Dc2e0F8B8e20d1eEc29216b",
+      "dimension": "percentage",
+      "value":7
+    },
+    {
+      "address" :"0x27F2f56e6Ee35E4995A965337ba2A7b4ec492FcC",
+      "dimension": "tokens",
+      "value": 8
+    },
+    {
+      "address" :"0xd13c7924241E51Eb013003490736e6169a15786a",
+      "dimension": "percentage",
+      "value": 9
+    },
+    {
+      "address" :"0xBC4023Baef7B812c23f21bc0b108A188243b07Cb",
+      "dimension": "tokens",
+      "value": 10
+    }, {
+      "address" :"0x2589bd7D8A58Ac9A4aC01d68A7c63315ef184c63",
+      "dimension": "percentage",
+      "value": 11
+    },
+    {
+      "address" :"0xF3eA35DB8F0058b4e0aD45F883172E92fdCb4B82",
+      "dimension": "tokens",
+      "value": 12
+    }, {
+      "address" :"0xb3b4F4b5568BB6dF78e4d96Ad30A5538C913D495",
+      "dimension": "percentage",
+      "value": 13
+    },
+    {
+      "address" :"0x16926399BAF474Cd314E6425ace67A88EA5BeA11",
+      "dimension": "tokens",
+      "value": 14
+    }, {
+      "address" :"0xE98055678d8e8724E5106b059e88557a99561007",
+      "dimension": "percentage",
+      "value": 15
+    },
+    {
+      "address" :"0x06554522da78D90015a12C5caaf96be2999ea3F9",
+      "dimension": "tokens",
+      "value": 16
+    }, {
+      "address" :"0x5537F8335625adB9f95Dfa6E7AfE3A2AF600084B",
+      "dimension": "percentage",
+      "value": 17
+    },
+    {
+      "address" :"0x1894F11ddf864CA1de4eB339512a79e199cbf194",
+      "dimension": "tokens",
+      "value": 18
+    }, {
+      "address" :"0xeec3B3A65E3157b19605911615218B33772d5da2",
+      "dimension": "percentage",
+      "value": 19
+    },
+    {
+      "address" :"0xec8Af49612F4EdfcD069B8cfe95552740c6849e0",
+      "dimension": "tokens",
+      "value": 20
+    }, {
+      "address" :"0x9613130348aC610732A391063CD70b5a8c186EfC",
+      "dimension": "percentage",
+      "value": 21
+    },
+    {
+      "address" :"0x7Bc397b1F42bB521cEadE2509f8deAF477C7BEd6",
+      "dimension": "tokens",
+      "value": 22
+    }, {
+      "address" :"0x8632cc8620f7aA794aC1a3b88e0D07E4BF133638",
+      "dimension": "percentage",
+      "value": 23
+    },
+    {
+      "address" :"0xd540257890329448fB721B6A1bB562Bb95BA0eb7",
+      "dimension": "tokens",
+      "value": 24
+    }, {
+      "address" :"0x8e4aD05Ae00C76a371B3Ab96AD739401ec63BCDA",
+      "dimension": "percentage",
+      "value": 25
+    },
+    {
+      "address" :"0xd3E49136aBdAda1EeD2df2ed7c7D530c1b54afcD",
+      "dimension": "tokens",
+      "value": 26
+    },
+    {
+      "address" :"0xF16AB2EA0a7F7B28C267cbA3Ed211Ea5c6e27411",
+      "dimension": "percentage",
+      "value": 1
+    },
+    {
+      "address" :"0xF16AB2EA0a7F7B28C267cbA3Ed211Ea5c6e27411",
+      "dimension": "tokens",
+      "value": 2
+    },
+    {
+      "address" :"0x40cAa4BF6893dF91638305cFCf98CB8E7Fa8D17F",
+      "dimension": "percentage",
+      "value": 3
+    },
+    {
+      "address" :"0x40cAa4BF6893dF91638305cFCf98CB8E7Fa8D17F",
+      "dimension": "tokens",
+      "value": 4
+    },
+    {
+      "address" :"0x41B4073E966c169dB22185805A951A0f1b805320",
+      "dimension": "percentage",
+      "value": 5
+    },
+    {
+      "address" :"0x41B4073E966c169dB22185805A951A0f1b805320",
+      "dimension": "tokens",
+      "value": 6
+    },
+    {
+      "address" :"0x56B2e3C3cFf7f3921Dc2e0F8B8e20d1eEc29216b",
+      "dimension": "percentage",
+      "value":7
+    },
+    {
+      "address" :"0x27F2f56e6Ee35E4995A965337ba2A7b4ec492FcC",
+      "dimension": "tokens",
+      "value": 8
+    },
+    {
+      "address" :"0xd13c7924241E51Eb013003490736e6169a15786a",
+      "dimension": "percentage",
+      "value": 9
+    },
+    {
+      "address" :"0xBC4023Baef7B812c23f21bc0b108A188243b07Cb",
+      "dimension": "tokens",
+      "value": 10
+    }, {
+      "address" :"0x2589bd7D8A58Ac9A4aC01d68A7c63315ef184c63",
+      "dimension": "percentage",
+      "value": 11
+    },
+    {
+      "address" :"0xF3eA35DB8F0058b4e0aD45F883172E92fdCb4B82",
+      "dimension": "tokens",
+      "value": 12
+    }, {
+      "address" :"0xb3b4F4b5568BB6dF78e4d96Ad30A5538C913D495",
+      "dimension": "percentage",
+      "value": 13
+    },
+    {
+      "address" :"0x16926399BAF474Cd314E6425ace67A88EA5BeA11",
+      "dimension": "tokens",
+      "value": 14
+    }, {
+      "address" :"0xE98055678d8e8724E5106b059e88557a99561007",
+      "dimension": "percentage",
+      "value": 15
+    },
+    {
+      "address" :"0x06554522da78D90015a12C5caaf96be2999ea3F9",
+      "dimension": "tokens",
+      "value": 16
+    }, {
+      "address" :"0x5537F8335625adB9f95Dfa6E7AfE3A2AF600084B",
+      "dimension": "percentage",
+      "value": 17
+    },
+    {
+      "address" :"0x1894F11ddf864CA1de4eB339512a79e199cbf194",
+      "dimension": "tokens",
+      "value": 18
+    }, {
+      "address" :"0xeec3B3A65E3157b19605911615218B33772d5da2",
+      "dimension": "percentage",
+      "value": 19
+    },
+    {
+      "address" :"0xec8Af49612F4EdfcD069B8cfe95552740c6849e0",
+      "dimension": "tokens",
+      "value": 20
+    }, {
+      "address" :"0x9613130348aC610732A391063CD70b5a8c186EfC",
+      "dimension": "percentage",
+      "value": 21
+    },
+    {
+      "address" :"0x7Bc397b1F42bB521cEadE2509f8deAF477C7BEd6",
+      "dimension": "tokens",
+      "value": 22
+    }, {
+      "address" :"0x8632cc8620f7aA794aC1a3b88e0D07E4BF133638",
+      "dimension": "percentage",
+      "value": 23
+    },
+    {
+      "address" :"0xd540257890329448fB721B6A1bB562Bb95BA0eb7",
+      "dimension": "tokens",
+      "value": 24
+    }, {
+      "address" :"0x8e4aD05Ae00C76a371B3Ab96AD739401ec63BCDA",
+      "dimension": "percentage",
+      "value": 25
+    },
+    {
+      "address" :"0xd3E49136aBdAda1EeD2df2ed7c7D530c1b54afcD",
+      "dimension": "tokens",
+      "value": 26
+    },
+    {
+      "address" :"0xF16AB2EA0a7F7B28C267cbA3Ed211Ea5c6e27411",
+      "dimension": "percentage",
+      "value": 1
+    },
+    {
+      "address" :"0xF16AB2EA0a7F7B28C267cbA3Ed211Ea5c6e27411",
+      "dimension": "tokens",
+      "value": 2
+    },
+    {
+      "address" :"0x40cAa4BF6893dF91638305cFCf98CB8E7Fa8D17F",
+      "dimension": "percentage",
+      "value": 3
+    },
+    {
+      "address" :"0x40cAa4BF6893dF91638305cFCf98CB8E7Fa8D17F",
+      "dimension": "tokens",
+      "value": 4
+    },
+    {
+      "address" :"0x41B4073E966c169dB22185805A951A0f1b805320",
+      "dimension": "percentage",
+      "value": 5
+    },
+    {
+      "address" :"0x41B4073E966c169dB22185805A951A0f1b805320",
+      "dimension": "tokens",
+      "value": 6
+    },
+    {
+      "address" :"0x56B2e3C3cFf7f3921Dc2e0F8B8e20d1eEc29216b",
+      "dimension": "percentage",
+      "value":7
+    },
+    {
+      "address" :"0x27F2f56e6Ee35E4995A965337ba2A7b4ec492FcC",
+      "dimension": "tokens",
+      "value": 8
+    },
+    {
+      "address" :"0xd13c7924241E51Eb013003490736e6169a15786a",
+      "dimension": "percentage",
+      "value": 9
+    },
+    {
+      "address" :"0xBC4023Baef7B812c23f21bc0b108A188243b07Cb",
+      "dimension": "tokens",
+      "value": 10
+    }, {
+      "address" :"0x2589bd7D8A58Ac9A4aC01d68A7c63315ef184c63",
+      "dimension": "percentage",
+      "value": 11
+    },
+    {
+      "address" :"0xF3eA35DB8F0058b4e0aD45F883172E92fdCb4B82",
+      "dimension": "tokens",
+      "value": 12
+    }, {
+      "address" :"0xb3b4F4b5568BB6dF78e4d96Ad30A5538C913D495",
+      "dimension": "percentage",
+      "value": 13
+    },
+    {
+      "address" :"0x16926399BAF474Cd314E6425ace67A88EA5BeA11",
+      "dimension": "tokens",
+      "value": 14
+    }, {
+      "address" :"0xE98055678d8e8724E5106b059e88557a99561007",
+      "dimension": "percentage",
+      "value": 15
+    },
+    {
+      "address" :"0x06554522da78D90015a12C5caaf96be2999ea3F9",
+      "dimension": "tokens",
+      "value": 16
+    }, {
+      "address" :"0x5537F8335625adB9f95Dfa6E7AfE3A2AF600084B",
+      "dimension": "percentage",
+      "value": 17
+    },
+    {
+      "address" :"0x1894F11ddf864CA1de4eB339512a79e199cbf194",
+      "dimension": "tokens",
+      "value": 18
+    }, {
+      "address" :"0xeec3B3A65E3157b19605911615218B33772d5da2",
+      "dimension": "percentage",
+      "value": 19
+    },
+    {
+      "address" :"0xec8Af49612F4EdfcD069B8cfe95552740c6849e0",
+      "dimension": "tokens",
+      "value": 20
+    }, {
+      "address" :"0x9613130348aC610732A391063CD70b5a8c186EfC",
+      "dimension": "percentage",
+      "value": 21
+    },
+    {
+      "address" :"0x7Bc397b1F42bB521cEadE2509f8deAF477C7BEd6",
+      "dimension": "tokens",
+      "value": 22
+    }, {
+      "address" :"0x8632cc8620f7aA794aC1a3b88e0D07E4BF133638",
+      "dimension": "percentage",
+      "value": 23
+    },
+    {
+      "address" :"0xd540257890329448fB721B6A1bB562Bb95BA0eb7",
+      "dimension": "tokens",
+      "value": 24
+    }, {
+      "address" :"0x8e4aD05Ae00C76a371B3Ab96AD739401ec63BCDA",
+      "dimension": "percentage",
+      "value": 25
+    },
+    {
+      "address" :"0xd3E49136aBdAda1EeD2df2ed7c7D530c1b54afcD",
+      "dimension": "tokens",
+      "value": 26
+    },
+    {
+      "address" :"0xF16AB2EA0a7F7B28C267cbA3Ed211Ea5c6e27411",
+      "dimension": "percentage",
+      "value": 1
+    },
+    {
+      "address" :"0xF16AB2EA0a7F7B28C267cbA3Ed211Ea5c6e27411",
+      "dimension": "tokens",
+      "value": 2
+    },
+    {
+      "address" :"0x40cAa4BF6893dF91638305cFCf98CB8E7Fa8D17F",
+      "dimension": "percentage",
+      "value": 3
+    },
+    {
+      "address" :"0x40cAa4BF6893dF91638305cFCf98CB8E7Fa8D17F",
+      "dimension": "tokens",
+      "value": 4
+    },
+    {
+      "address" :"0x41B4073E966c169dB22185805A951A0f1b805320",
+      "dimension": "percentage",
+      "value": 5
+    },
+    {
+      "address" :"0x41B4073E966c169dB22185805A951A0f1b805320",
+      "dimension": "tokens",
+      "value": 6
+    },
+    {
+      "address" :"0x56B2e3C3cFf7f3921Dc2e0F8B8e20d1eEc29216b",
+      "dimension": "percentage",
+      "value":7
+    },
+    {
+      "address" :"0x27F2f56e6Ee35E4995A965337ba2A7b4ec492FcC",
+      "dimension": "tokens",
+      "value": 8
+    },
+    {
+      "address" :"0xd13c7924241E51Eb013003490736e6169a15786a",
+      "dimension": "percentage",
+      "value": 9
+    },
+    {
+      "address" :"0xBC4023Baef7B812c23f21bc0b108A188243b07Cb",
+      "dimension": "tokens",
+      "value": 10
+    }, {
+      "address" :"0x2589bd7D8A58Ac9A4aC01d68A7c63315ef184c63",
+      "dimension": "percentage",
+      "value": 11
+    },
+    {
+      "address" :"0xF3eA35DB8F0058b4e0aD45F883172E92fdCb4B82",
+      "dimension": "tokens",
+      "value": 12
+    }, {
+      "address" :"0xb3b4F4b5568BB6dF78e4d96Ad30A5538C913D495",
+      "dimension": "percentage",
+      "value": 13
+    },
+    {
+      "address" :"0x16926399BAF474Cd314E6425ace67A88EA5BeA11",
+      "dimension": "tokens",
+      "value": 14
+    }, {
+      "address" :"0xE98055678d8e8724E5106b059e88557a99561007",
+      "dimension": "percentage",
+      "value": 15
+    },
+    {
+      "address" :"0x06554522da78D90015a12C5caaf96be2999ea3F9",
+      "dimension": "tokens",
+      "value": 16
+    }, {
+      "address" :"0x5537F8335625adB9f95Dfa6E7AfE3A2AF600084B",
+      "dimension": "percentage",
+      "value": 17
+    },
+    {
+      "address" :"0x1894F11ddf864CA1de4eB339512a79e199cbf194",
+      "dimension": "tokens",
+      "value": 18
+    }, {
+      "address" :"0xeec3B3A65E3157b19605911615218B33772d5da2",
+      "dimension": "percentage",
+      "value": 19
+    },
+    {
+      "address" :"0xec8Af49612F4EdfcD069B8cfe95552740c6849e0",
+      "dimension": "tokens",
+      "value": 20
+    }, {
+      "address" :"0x9613130348aC610732A391063CD70b5a8c186EfC",
+      "dimension": "percentage",
+      "value": 21
+    },
+    {
+      "address" :"0x7Bc397b1F42bB521cEadE2509f8deAF477C7BEd6",
+      "dimension": "tokens",
+      "value": 22
+    }, {
+      "address" :"0x8632cc8620f7aA794aC1a3b88e0D07E4BF133638",
+      "dimension": "percentage",
+      "value": 23
+    },
+    {
+      "address" :"0xd540257890329448fB721B6A1bB562Bb95BA0eb7",
+      "dimension": "tokens",
+      "value": 24
+    }, {
+      "address" :"0x8e4aD05Ae00C76a371B3Ab96AD739401ec63BCDA",
+      "dimension": "percentage",
+      "value": 25
+    },
+    {
+      "address" :"0xd3E49136aBdAda1EeD2df2ed7c7D530c1b54afcD",
+      "dimension": "tokens",
+      "value": 26
+    },
+    {
+      "address" :"0xF16AB2EA0a7F7B28C267cbA3Ed211Ea5c6e27411",
+      "dimension": "percentage",
+      "value": 1
+    },
+    {
+      "address" :"0xF16AB2EA0a7F7B28C267cbA3Ed211Ea5c6e27411",
+      "dimension": "tokens",
+      "value": 2
+    },
+    {
+      "address" :"0x40cAa4BF6893dF91638305cFCf98CB8E7Fa8D17F",
+      "dimension": "percentage",
+      "value": 3
+    },
+    {
+      "address" :"0x40cAa4BF6893dF91638305cFCf98CB8E7Fa8D17F",
+      "dimension": "tokens",
+      "value": 4
+    },
+    {
+      "address" :"0x41B4073E966c169dB22185805A951A0f1b805320",
+      "dimension": "percentage",
+      "value": 5
+    },
+    {
+      "address" :"0x41B4073E966c169dB22185805A951A0f1b805320",
+      "dimension": "tokens",
+      "value": 6
+    },
+    {
+      "address" :"0x56B2e3C3cFf7f3921Dc2e0F8B8e20d1eEc29216b",
+      "dimension": "percentage",
+      "value":7
+    },
+    {
+      "address" :"0x27F2f56e6Ee35E4995A965337ba2A7b4ec492FcC",
+      "dimension": "tokens",
+      "value": 8
+    },
+    {
+      "address" :"0xd13c7924241E51Eb013003490736e6169a15786a",
+      "dimension": "percentage",
+      "value": 9
+    },
+    {
+      "address" :"0xBC4023Baef7B812c23f21bc0b108A188243b07Cb",
+      "dimension": "tokens",
+      "value": 10
+    }, {
+      "address" :"0x2589bd7D8A58Ac9A4aC01d68A7c63315ef184c63",
+      "dimension": "percentage",
+      "value": 11
+    },
+    {
+      "address" :"0xF3eA35DB8F0058b4e0aD45F883172E92fdCb4B82",
+      "dimension": "tokens",
+      "value": 12
+    }, {
+      "address" :"0xb3b4F4b5568BB6dF78e4d96Ad30A5538C913D495",
+      "dimension": "percentage",
+      "value": 13
+    },
+    {
+      "address" :"0x16926399BAF474Cd314E6425ace67A88EA5BeA11",
+      "dimension": "tokens",
+      "value": 14
+    }, {
+      "address" :"0xE98055678d8e8724E5106b059e88557a99561007",
+      "dimension": "percentage",
+      "value": 15
+    },
+    {
+      "address" :"0x06554522da78D90015a12C5caaf96be2999ea3F9",
+      "dimension": "tokens",
+      "value": 16
+    }, {
+      "address" :"0x5537F8335625adB9f95Dfa6E7AfE3A2AF600084B",
+      "dimension": "percentage",
+      "value": 17
+    },
+    {
+      "address" :"0x1894F11ddf864CA1de4eB339512a79e199cbf194",
+      "dimension": "tokens",
+      "value": 18
+    }, {
+      "address" :"0xeec3B3A65E3157b19605911615218B33772d5da2",
+      "dimension": "percentage",
+      "value": 19
+    },
+    {
+      "address" :"0xec8Af49612F4EdfcD069B8cfe95552740c6849e0",
+      "dimension": "tokens",
+      "value": 20
+    }, {
+      "address" :"0x9613130348aC610732A391063CD70b5a8c186EfC",
+      "dimension": "percentage",
+      "value": 21
+    },
+    {
+      "address" :"0x7Bc397b1F42bB521cEadE2509f8deAF477C7BEd6",
+      "dimension": "tokens",
+      "value": 22
+    }, {
+      "address" :"0x8632cc8620f7aA794aC1a3b88e0D07E4BF133638",
+      "dimension": "percentage",
+      "value": 23
+    },
+    {
+      "address" :"0xd540257890329448fB721B6A1bB562Bb95BA0eb7",
+      "dimension": "tokens",
+      "value": 24
+    }, {
+      "address" :"0x8e4aD05Ae00C76a371B3Ab96AD739401ec63BCDA",
+      "dimension": "percentage",
+      "value": 25
+    },
+    {
+      "address" :"0xd3E49136aBdAda1EeD2df2ed7c7D530c1b54afcD",
+      "dimension": "tokens",
+      "value": 26
+    },
+    {
+      "address" :"0xF16AB2EA0a7F7B28C267cbA3Ed211Ea5c6e27411",
+      "dimension": "percentage",
+      "value": 1
+    },
+    {
+      "address" :"0xF16AB2EA0a7F7B28C267cbA3Ed211Ea5c6e27411",
+      "dimension": "tokens",
+      "value": 2
+    },
+    {
+      "address" :"0x40cAa4BF6893dF91638305cFCf98CB8E7Fa8D17F",
+      "dimension": "percentage",
+      "value": 3
+    },
+    {
+      "address" :"0x40cAa4BF6893dF91638305cFCf98CB8E7Fa8D17F",
+      "dimension": "tokens",
+      "value": 4
+    },
+    {
+      "address" :"0x41B4073E966c169dB22185805A951A0f1b805320",
+      "dimension": "percentage",
+      "value": 5
+    },
+    {
+      "address" :"0x41B4073E966c169dB22185805A951A0f1b805320",
+      "dimension": "tokens",
+      "value": 6
+    },
+    {
+      "address" :"0x56B2e3C3cFf7f3921Dc2e0F8B8e20d1eEc29216b",
+      "dimension": "percentage",
+      "value":7
+    },
+    {
+      "address" :"0x27F2f56e6Ee35E4995A965337ba2A7b4ec492FcC",
+      "dimension": "tokens",
+      "value": 8
+    },
+    {
+      "address" :"0xd13c7924241E51Eb013003490736e6169a15786a",
+      "dimension": "percentage",
+      "value": 9
+    },
+    {
+      "address" :"0xBC4023Baef7B812c23f21bc0b108A188243b07Cb",
+      "dimension": "tokens",
+      "value": 10
+    }, {
+      "address" :"0x2589bd7D8A58Ac9A4aC01d68A7c63315ef184c63",
+      "dimension": "percentage",
+      "value": 11
+    },
+    {
+      "address" :"0xF3eA35DB8F0058b4e0aD45F883172E92fdCb4B82",
+      "dimension": "tokens",
+      "value": 12
+    }, {
+      "address" :"0xb3b4F4b5568BB6dF78e4d96Ad30A5538C913D495",
+      "dimension": "percentage",
+      "value": 13
+    },
+    {
+      "address" :"0x16926399BAF474Cd314E6425ace67A88EA5BeA11",
+      "dimension": "tokens",
+      "value": 14
+    }, {
+      "address" :"0xE98055678d8e8724E5106b059e88557a99561007",
+      "dimension": "percentage",
+      "value": 15
+    },
+    {
+      "address" :"0x06554522da78D90015a12C5caaf96be2999ea3F9",
+      "dimension": "tokens",
+      "value": 16
+    }, {
+      "address" :"0x5537F8335625adB9f95Dfa6E7AfE3A2AF600084B",
+      "dimension": "percentage",
+      "value": 17
+    },
+    {
+      "address" :"0x1894F11ddf864CA1de4eB339512a79e199cbf194",
+      "dimension": "tokens",
+      "value": 18
+    }, {
+      "address" :"0xeec3B3A65E3157b19605911615218B33772d5da2",
+      "dimension": "percentage",
+      "value": 19
+    },
+    {
+      "address" :"0xec8Af49612F4EdfcD069B8cfe95552740c6849e0",
+      "dimension": "tokens",
+      "value": 20
+    }, {
+      "address" :"0x9613130348aC610732A391063CD70b5a8c186EfC",
+      "dimension": "percentage",
+      "value": 21
+    },
+    {
+      "address" :"0x7Bc397b1F42bB521cEadE2509f8deAF477C7BEd6",
+      "dimension": "tokens",
+      "value": 22
+    }, {
+      "address" :"0x8632cc8620f7aA794aC1a3b88e0D07E4BF133638",
+      "dimension": "percentage",
+      "value": 23
+    },
+    {
+      "address" :"0xd540257890329448fB721B6A1bB562Bb95BA0eb7",
+      "dimension": "tokens",
+      "value": 24
+    }, {
+      "address" :"0x8e4aD05Ae00C76a371B3Ab96AD739401ec63BCDA",
+      "dimension": "percentage",
+      "value": 25
+    },
+    {
+      "address" :"0xd3E49136aBdAda1EeD2df2ed7c7D530c1b54afcD",
+      "dimension": "tokens",
+      "value": 26
+    },
+    {
+      "address" :"0xF16AB2EA0a7F7B28C267cbA3Ed211Ea5c6e27411",
+      "dimension": "percentage",
+      "value": 1
+    },
+    {
+      "address" :"0xF16AB2EA0a7F7B28C267cbA3Ed211Ea5c6e27411",
+      "dimension": "tokens",
+      "value": 2
+    },
+    {
+      "address" :"0x40cAa4BF6893dF91638305cFCf98CB8E7Fa8D17F",
+      "dimension": "percentage",
+      "value": 3
+    },
+    {
+      "address" :"0x40cAa4BF6893dF91638305cFCf98CB8E7Fa8D17F",
+      "dimension": "tokens",
+      "value": 4
+    },
+    {
+      "address" :"0x41B4073E966c169dB22185805A951A0f1b805320",
+      "dimension": "percentage",
+      "value": 5
+    },
+    {
+      "address" :"0x41B4073E966c169dB22185805A951A0f1b805320",
+      "dimension": "tokens",
+      "value": 6
+    },
+    {
+      "address" :"0x56B2e3C3cFf7f3921Dc2e0F8B8e20d1eEc29216b",
+      "dimension": "percentage",
+      "value":7
+    },
+    {
+      "address" :"0x27F2f56e6Ee35E4995A965337ba2A7b4ec492FcC",
+      "dimension": "tokens",
+      "value": 8
+    },
+    {
+      "address" :"0xd13c7924241E51Eb013003490736e6169a15786a",
+      "dimension": "percentage",
+      "value": 9
+    },
+    {
+      "address" :"0xBC4023Baef7B812c23f21bc0b108A188243b07Cb",
+      "dimension": "tokens",
+      "value": 10
+    }, {
+      "address" :"0x2589bd7D8A58Ac9A4aC01d68A7c63315ef184c63",
+      "dimension": "percentage",
+      "value": 11
+    },
+    {
+      "address" :"0xF3eA35DB8F0058b4e0aD45F883172E92fdCb4B82",
+      "dimension": "tokens",
+      "value": 12
+    }, {
+      "address" :"0xb3b4F4b5568BB6dF78e4d96Ad30A5538C913D495",
+      "dimension": "percentage",
+      "value": 13
+    },
+    {
+      "address" :"0x16926399BAF474Cd314E6425ace67A88EA5BeA11",
+      "dimension": "tokens",
+      "value": 14
+    }, {
+      "address" :"0xE98055678d8e8724E5106b059e88557a99561007",
+      "dimension": "percentage",
+      "value": 15
+    },
+    {
+      "address" :"0x06554522da78D90015a12C5caaf96be2999ea3F9",
+      "dimension": "tokens",
+      "value": 16
+    }, {
+      "address" :"0x5537F8335625adB9f95Dfa6E7AfE3A2AF600084B",
+      "dimension": "percentage",
+      "value": 17
+    },
+    {
+      "address" :"0x1894F11ddf864CA1de4eB339512a79e199cbf194",
+      "dimension": "tokens",
+      "value": 18
+    }, {
+      "address" :"0xeec3B3A65E3157b19605911615218B33772d5da2",
+      "dimension": "percentage",
+      "value": 19
+    },
+    {
+      "address" :"0xec8Af49612F4EdfcD069B8cfe95552740c6849e0",
+      "dimension": "tokens",
+      "value": 20
+    }, {
+      "address" :"0x9613130348aC610732A391063CD70b5a8c186EfC",
+      "dimension": "percentage",
+      "value": 21
+    },
+    {
+      "address" :"0x7Bc397b1F42bB521cEadE2509f8deAF477C7BEd6",
+      "dimension": "tokens",
+      "value": 22
+    }, {
+      "address" :"0x8632cc8620f7aA794aC1a3b88e0D07E4BF133638",
+      "dimension": "percentage",
+      "value": 23
+    },
+    {
+      "address" :"0xd540257890329448fB721B6A1bB562Bb95BA0eb7",
+      "dimension": "tokens",
+      "value": 24
+    }, {
+      "address" :"0x8e4aD05Ae00C76a371B3Ab96AD739401ec63BCDA",
+      "dimension": "percentage",
+      "value": 25
+    },
+    {
+      "address" :"0xd3E49136aBdAda1EeD2df2ed7c7D530c1b54afcD",
+      "dimension": "tokens",
+      "value": 26
+    }
+
+
+
+  ],
+  "walletAddress":"0xF16AB2EA0a7F7B28C267cbA3Ed211Ea5c6e27411",
+  "gasprice": 40,
+  "mincap": 1,
+  "whitelisting":false,
+  "tiers":[
+    {
+      "name":"###1",
+      "allowModify": true,
+      "startDate": "02/12/2018",
+      "startTime": "08:50pm",
+      "endDate":"02/12/2018",
+      "endTime":"10:35pm",
+      "rate":100,
+      "supply": 100,
+      "whitelist":[
+        {
+          "address":"0x6f53002497203d167771eb0852b4c1caDA7a585f",
+          "min":6,
+          "max":100
+        },
+        {
+          "address":"0x42f0143F2E9Ab64CA3811bbA08E40D798C18E7f4",
+          "min":8,
+          "max":55
+        }]
+    }]
+
+}

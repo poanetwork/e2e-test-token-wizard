@@ -11,13 +11,12 @@ const meta=require('../pages/MetaMask.js');
 const managePage=require('../pages/ManagePage.js');
 const ManagePage=managePage.ManagePage;
 const baseTest=require('./BaseTest.js');
-const utils=require('../utils/Utils.js');
-const Utils=utils.Utils;
+//const utils=require('../utils/Utils.js');
+//const Utils=utils.Utils;
 const Web3 = require('web3');
 const fs = require('fs');
 const metaMaskWallet=require('../entity/MetaMaskWallet.js');
 const MetaMaskWallet=metaMaskWallet.MetaMaskWallet;
-
 
 
 
@@ -40,32 +39,31 @@ class Test2 extends baseTest.BaseTest {
         var mngPage=new ManagePage(this.driver);
 
         metaMask.open();
-
-
-
-
         metaMask.activate();
-
         welcomePage.switchToAnotherPage();
         welcomePage.open();
-
-
         welcomePage.clickButtonChooseContract();
+        do {} while(!await  mngPage.isAvailable());
+        var contract="0x7eB29E0922C87D728c81A9FAB66e97668c917108";
+        mngPage.URL=startURL+"manage/"+contract;
+        mngPage.open();
+        //this.driver.sleep(5000);
+
+        do{
+
+        } while(!await mngPage.isPresentButtonFinalize());
+        console.log(await mngPage.isAvailableDistribute());
+
+        mngPage.clickButtonFinalize();
+       // if (mngPage.isAvailableDistribute())mngPage.clickButtonDistribute();
+        //if (mngPage.isAvailableFinalize()) mngPage.clickButtonFinalize();
 
 
 
 
 
 
-this.driver.sleep(2000);
-        var contract="0x71bE64E8f9a2A0A497FAF084d80b8e8BB2b5c3A5";
-      //  var s;
-         await mngPage.selectContracts(contract);
-//console.log(s.length());
-        utils.zoom(this.driver,1.75);
-        this.driver.sleep(2000);
-        utils.zoom(this.driver,1.5);
-        //mngPage.clickButtonContinue();
+
 
     }
 
